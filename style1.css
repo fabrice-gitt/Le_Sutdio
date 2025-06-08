@@ -1,0 +1,261 @@
+/* =========================
+  Variables
+  ========================= */
+  :root {
+    --gold: #c7a662;
+    --dark: #1c1c1c;
+    --light: #ffffff;
+    --gray: #f8f9fa;
+  }
+  
+  /* =========================
+    Reset & Base
+    ========================= */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-top: 80px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  /* =========================
+    Layout & Utilities
+    ========================= */
+  .space {
+    height: 30px;
+  }
+  
+  .space1 {
+    height: 150px;
+  }
+  
+  .trait {
+    width: 20px;
+    height: 2px;
+    background-color: var(--gold);
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .titre-t {
+    text-align: center;
+  }
+  
+  /* =========================
+    Footer
+    ========================= */
+  footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* =========================
+    Navbar & Header
+    ========================= */
+  header {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .nav-link.active {
+    font-weight: 700;
+  }
+  
+  .phone-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #000;
+  }
+  
+  /* =========================
+    Carousel
+    ========================= */
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px #000;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1rem;
+    border: none;
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin: 0 6px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: var(--gold);
+    border-color: #fff;
+  }
+  
+  /* =========================
+    Buttons
+    ========================= */
+  .btn-transparent {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-transparent:hover {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .btn-gold-outline {
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-gold-outline:hover {
+    background: var(--gold);
+    color: #fff;
+  }
+  
+  .btn-border-bottom {
+    border: none;
+    border-bottom: 2px solid var(--gold);
+    background: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-border-bottom:hover {
+    border-bottom-width: 4px;
+  }
+  
+  .btn-hover-pale-yellow:hover,
+  .btn-hover-pale-yellow:focus {
+    background-color: #fff9c4 !important;
+    color: #333 !important;
+  }
+  
+  /* =========================
+    Images & Instagram Section
+    ========================= */
+  .insta-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .insta-img img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .insta-img:hover img {
+    filter: blur(4px);
+    transform: scale(1.05);
+  }
+  
+  .insta-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .insta-img:hover .insta-info {
+    opacity: 1;
+  }
+  
+  /* =========================
+    Map
+    ========================= */
+  .map {
+    height: 100vh;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+  }
+  
+  /* =========================
+    Helpers & Custom
+    ========================= */
+  .custom-hover-gold:hover {
+    color: var(--gold) !important;
+  }
+  .text-gold {
+    color: var(--gold) !important;
+  }
+  
