@@ -102,6 +102,37 @@
                             <label for="name" class="form-label">Nom</label>
                             <input type="text" class="form-control" id="name" name="name" required
                                 style="background-color: #f2f2f2;">
+                               <script>
+                                const form = document.getElementById('contactForm');
+                                const nameInput = document.getElementById('name');
+                                const emailInput = document.getElementById('email');
+
+                                function validateInput(input, regex) {
+                                    if (regex.test(input.value)) {
+                                        input.style.borderColor = 'green';
+                                    } else {
+                                        input.style.borderColor = 'red';
+                                    }
+                                }
+
+                                nameInput.addEventListener('input', function () {
+                                    validateInput(nameInput, /^[a-zA-Z\s]+$/);
+                                });
+
+                                emailInput.addEventListener('input', function () {
+                                    validateInput(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+                                });
+
+                                form.addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    if (nameInput.style.borderColor === 'green' && emailInput.style.borderColor === 'green') {
+                                        alert("Message envoyé ! Merci de nous avoir contacté.");
+                                        form.submit();
+                                    } else {
+                                        alert("Veuillez remplir correctement tous les champs.");
+                                    }
+                                });
+                            </script>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
