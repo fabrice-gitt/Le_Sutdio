@@ -1,66 +1,85 @@
-// Bootstrap validation regex
-function validateInput(type, value) {
-    switch (type) {
-        case 'prenom':
-        case 'nom':
-            // Lettres, espaces, apostrophes, tirets
-            return /^[a-zA-ZÀ-ÿ '-]+$/.test(value);
-        case 'email':
-            // Email simple
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        case 'phone':
-            // 10 chiffres
-            return /^\d{10}$/.test(value);
-        default:
-            return false;
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nom = document.querySelector('input[name="nom"]');
+    const prenom = document.querySelector('input[name="prenom"]');
+    const telephone = document.querySelector('input[name="telephone"]');
+    const email = document.querySelector('input[name="email"]');
+    const sujet = document.querySelector('input[name="sujet"]');
+    const message = document.querySelector('textarea[name="message"]');
+
+    const regexNom = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,}$/;
+    const regexPrenom = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,}$/;
+    const regexTelephone = /^(0[1-9]\d{8}|(\+33|0033)[1-9]\d{8})$/;
+    const regexEmail = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+    const regexSujet = /^.{3,}$/;
+    const regexMessage = /^.{10,}$/;
+
+    let isValid = true;
+
+    function showError(input, message) {
+      input.classList.add('is-invalid');
+      if (!input.nextElementSibling || !input.nextElementSibling.classList.contains('invalid-feedback')) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'invalid-feedback';
+        errorDiv.innerText = message;
+        input.parentNode.appendChild(errorDiv);
+      }
     }
-  }
-  
-  // Sélection des inputs
-  const prenomInput = document.querySelector('input[placeholder="Prénom"]');
-  const nomInput = document.querySelector('input[placeholder="Nom"]');
-  const emailInput = document.querySelector('input[placeholder="Email"]');
-  const phoneInput = document.querySelector('input[placeholder="Téléphone"]');
-  
-  // Validation au submit
-  document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let errorMessage = '';
-    let successMessage = '';
-  
-    if (!validateInput('prenom', prenomInput.value)) {
-        errorMessage += 'Le prénom est invalide. ';
+
+    function clearError(input) {
+      input.classList.remove('is-invalid');
+      const error = input.parentNode.querySelector('.invalid-feedback');
+      if (error) error.remove();
     }
-    if (!validateInput('nom', nomInput.value)) {
-        errorMessage += 'Le nom est invalide. ';
-    }
-    if (!validateInput('email', emailInput.value)) {
-        errorMessage += 'L\'email est invalide. ';
-    }
-    if (!validateInput('phone', phoneInput.value)) {
-        errorMessage += 'Le téléphone est invalide. ';
-    }
-  
-    if (errorMessage) {
-        document.getElementById('error-message').textContent = errorMessage;
-        document.getElementById('success-message').textContent = '';
+
+    // Validation
+    if (!regexNom.test(nom.value.trim())) {
+      isValid = false;
+      showError(nom, "Nom invalide.");
     } else {
-        successMessage = 'Formulaire soumis avec succès !';
-        document.getElementById('success-message').textContent = successMessage;
-        document.getElementById('error-message').textContent = '';
+      clearError(nom);
+    }
+
+    if (!regexPrenom.test(prenom.value.trim())) {
+      isValid = false;
+      showError(prenom, "Prénom invalide.");
+    } else {
+      clearError(prenom);
+    }
+
+    if (!regexTelephone.test(telephone.value.trim())) {
+      isValid = false;
+      showError(telephone, "Téléphone invalide.");
+    } else {
+      clearError(telephone);
+    }
+
+    if (!regexEmail.test(email.value.trim())) {
+      isValid = false;
+      showError(email, "Email invalide.");
+    } else {
+      clearError(email);
+    }
+
+    if (!regexSujet.test(sujet.value.trim())) {
+      isValid = false;
+      showError(sujet, "Sujet trop court.");
+    } else {
+      clearError(sujet);
+    }
+
+    if (!regexMessage.test(message.value.trim())) {
+      isValid = false;
+      showError(message, "Message trop court (minimum 10 caractères).");
+    } else {
+      clearError(message);
+    }
+
+    if (isValid) {
+      alert('Formulaire validé ! (Ici tu pourrais envoyer les données)');
+      // this.submit(); // Décommente si tu veux envoyer le formulaire
     }
   });
-  
-  // Validation en temps réel
-  prenomInput.addEventListener('input', function() {
-    prenomInput.style.borderColor = validateInput('prenom', prenomInput.value) ? 'green' : 'red';
-  });
-  nomInput.addEventListener('input', function() {
-    nomInput.style.borderColor = validateInput('nom', nomInput.value) ? 'green' : 'red';
-  });
-  emailInput.addEventListener('input', function() {
-    emailInput.style.borderColor = validateInput('email', emailInput.value) ? 'green' : 'red';
-  });
-  phoneInput.addEventListener('input', function() {
-    phoneInput.style.borderColor = validateInput('phone', phoneInput.value) ? 'green' : 'red';
-  });
+
