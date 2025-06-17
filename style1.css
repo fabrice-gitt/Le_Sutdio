@@ -281,7 +281,7 @@
   }
 
 /* Style pour les messages d'erreur (avec animation) */
-.error-message {
+/* .error-message {
     color: #D32F2F;
     font-size: 13px;
     font-family: 'Oswald', sans-serif;
@@ -296,7 +296,7 @@
 .error-message.show {
     height: 20px; /* Hauteur pour afficher le message */
     opacity: 1;
-}
+} */
 
 /* Classes de validation pour les bordures */
 .invalid {
