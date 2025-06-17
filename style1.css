@@ -279,4 +279,30 @@
   .text-gold {
     color: var(--gold) !important;
   }
-  
+
+/* Style pour les messages d'erreur (avec animation) */
+.error-message {
+    color: #D32F2F;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    margin-top: 5px;
+}
+
+.error-message.show {
+    height: 20px; /* Hauteur pour afficher le message */
+    opacity: 1;
+}
+
+/* Classes de validation pour les bordures */
+.invalid {
+    border-color: #D32F2F !important; /* Bordure rouge pour erreur */
+}
+
+.valid {
+    border-color: #388E3C !important; /* Bordure verte pour succès */
+}
