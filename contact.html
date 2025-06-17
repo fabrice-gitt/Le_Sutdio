@@ -93,63 +93,61 @@
                         <br> Samedi : 9h00 - 18h00, Dimanche : Fermé
                     </p>
                 </div>
-                <!-- Nous contacter -->
-                <div class="col-md-6 order-md-2">
-                    <h2>Nous contacter</h2>
-                    <img src="Assets/Général/icons/bg_titre.jpg" alt="">
-                    <form id="contactForm" action="https://formspree.io/f/xjvowzqk" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="name" name="name" required
-                                style="background-color: #f2f2f2;">
-                               <script>
-                                const form = document.getElementById('contactForm');
-                                const nameInput = document.getElementById('name');
-                                const emailInput = document.getElementById('email');
-
-                                function validateInput(input, regex) {
-                                    if (regex.test(input.value)) {
-                                        input.style.borderColor = 'green';
-                                    } else {
-                                        input.style.borderColor = 'red';
-                                    }
-                                }
-
-                                nameInput.addEventListener('input', function () {
-                                    validateInput(nameInput, /^[a-zA-Z\s]+$/);
-                                });
-
-                                emailInput.addEventListener('input', function () {
-                                    validateInput(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-                                });
-
-                                form.addEventListener('submit', function (e) {
-                                    e.preventDefault();
-                                    if (nameInput.style.borderColor === 'green' && emailInput.style.borderColor === 'green') {
-                                        alert("Message envoyé ! Merci de nous avoir contacté.");
-                                        form.submit();
-                                    } else {
-                                        alert("Veuillez remplir correctement tous les champs.");
-                                    }
-                                });
-                            </script>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="_replyto" required
-                                style="background-color: #f2f2f2;">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required
-                                style="background-color: #f2f2f2;"></textarea>
-                        </div>
-                        <button type="submit" class="btn"
-                            style="background-color: rgb(175, 155, 43); color: white;">Envoyer</button>
-                    </form>
-                </div>
-            </div>
+              
+    <h2>Nous contacter</h2>
+    <img src="Assets/Général/icons/bg_titre.jpg" alt="Background Title">
+    <form id="contactForm" action="https://formspree.io/f/xjvowzqk" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required
+                style="background-color: #f2f2f2;">
         </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="_replyto" required
+                style="background-color: #f2f2f2;">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required
+                style="background-color: #f2f2f2;"></textarea>
+        </div>
+        <button type="submit" class="btn"
+            style="background-color: rgb(175, 155, 43); color: white;">Envoyer</button>
+    </form>
+    <script>
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+
+        function validateInput(input, regex) {
+            if (regex.test(input.value)) {
+                input.style.borderColor = 'green';
+            } else {
+                input.style.borderColor = 'red';
+            }
+        }
+
+        nameInput.addEventListener('input', function () {
+            validateInput(nameInput, /^[a-zA-Z\s]+$/);
+        });
+
+        emailInput.addEventListener('input', function () {
+            validateInput(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (nameInput.style.borderColor === 'green' && emailInput.style.borderColor === 'green') {
+                alert("Message envoyé ! Merci de nous avoir contacté.");
+                form.submit();
+            } else {
+                alert("Veuillez remplir correctement tous les champs.");
+            }
+        });
+    </script>
+</div>
+
         <div class="space"></div>
         <div class="container-fluid bg-dark text-white ">
             <iframe
