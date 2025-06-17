@@ -280,29 +280,23 @@
     color: var(--gold) !important;
   }
 
-/* Style pour les messages d'erreur (avec animation) */
-/* .error-message {
-    color: #D32F2F;
-    font-size: 13px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    margin-top: 5px;
+/* Styles pour les messages d'erreur du formulaire */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none; /* Caché par défaut */
 }
 
 .error-message.show {
-    height: 20px; /* Hauteur pour afficher le message */
-    opacity: 1;
-} */
-
-/* Classes de validation pour les bordures */
-.invalid {
-    border-color: #D32F2F !important; /* Bordure rouge pour erreur */
+    display: block; /* Affiché uniquement quand la classe show est présente */
 }
 
-.valid {
-    border-color: #388E3C !important; /* Bordure verte pour succès */
+/* Styles pour les champs de formulaire */
+.form-control.invalid {
+    border-color: #dc3545;
+}
+
+.form-control.valid {
+    border-color: #198754;
 }
