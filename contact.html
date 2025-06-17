@@ -82,40 +82,45 @@
         <div class="container">
             <div class="row">
                 <!-- Nos coordonnées -->
-                <div class="col-md-6 order-md-1">
-                    <h2>Nos coordonnées</h2>
-                    <img src="Assets/Général/icons/bg_titre.jpg" alt="">
-                    <h3>Studio Sport Biarritz</h3>
-                    <p>Adresse : 123 Rue du Sport, 64200 Biarritz, France</p>
-                    <p>Téléphone : 0745 678 899</p>
-                    <p>Email : fabrice@example.com</a></p>
-                    <p>Horaires d'ouverture : Lundi - Vendredi : 8h00 - 20h00,
-                        <br> Samedi : 9h00 - 18h00, Dimanche : Fermé
-                    </p>
-                </div>
-              
-    <!-- Nous contacter -->
-<div class="col-md-6 order-md-2">
-    <h2>Nous contacter</h2>
-    <img src="Assets/Général/icons/bg_titre.jpg" alt="Background Title">
-    <form id="contactForm" action="https://formspree.io/f/xjvowzqk" method="POST">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="name" name="name" required style="background-color: #f2f2f2;">
+                <div class="col-md-6 order-md-2"></div>
+                <h2>Nos coordonnées</h2>
+                <img src="Assets/Général/icons/bg_titre.jpg" alt="">
+                <h3>Studio Sport Biarritz</h3>
+                <p>Adresse : 123 Rue du Sport, 64200 Biarritz, France</p>
+                <p>Téléphone : 0745 678 899</p>
+                <p>Email : fabrice@example.com</a></p>
+                <p>Horaires d'ouverture : Lundi - Vendredi : 8h00 - 20h00,
+                    <br> Samedi : 9h00 - 18h00, Dimanche : Fermé
+                </p>
+            </div>
+
+            <!-- Nous contacter -->
+            <div class="col-md-6 order-md-1">
+                <h2>Nous contacter</h2>
+                <img src="Assets/Général/icons/bg_titre.jpg" alt="Background Title">
+                <form id="contactForm" action="https://formspree.io/f/xjvowzqk" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" required
+                            style="background-color: #f2f2f2;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="_replyto" required
+                            style="background-color: #f2f2f2;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required
+                            style="background-color: #f2f2f2;"></textarea>
+                    </div>
+                    <button type="submit" class="btn"
+                        style="background-color: rgb(175, 155, 43); color: white;">Envoyer</button>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="_replyto" required
-                style="background-color: #f2f2f2;">
         </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required
-                style="background-color: #f2f2f2;"></textarea>
-        </div>
-        <button type="submit" class="btn" style="background-color: rgb(175, 155, 43); color: white;">Envoyer</button>
-    </form>
-</div>        <div class="space"></div>
+        <div class="space"></div>
         <div class="container-fluid bg-dark text-white ">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999123456789!2d2.329123456789012!3d48.85884430000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f9c12345678%3A0x1234567890abcdef!2sStudio%20Sport%20Biarritz!5e0!3m2!1sen!2sfr!4v1616161616161"
@@ -259,7 +264,9 @@
     <!-- Bootstrap Bundle JS (Popper + Bootstrap JS) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Validation du formulaire -->
-    <script src="regex.js"></script>           
+    <script src="regex.js"></script>
+
+
 </body>
 
 </html>
