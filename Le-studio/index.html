@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Studio Sport & Coaching</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Open Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- javascript -->
+    <script src="main.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent justify-content-center">
+            <div class="container-fluid">
+                <!-- logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="Assets/Général/icons/logo.png" alt="logo" height="40" />
+                </a>
+                <!-- Burger button -->
+                <button class="navbar-toggler border-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav align-items-center">
+                        <!-- Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="404.html">L'EQUIPE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="traning.html">LES ACTIVITÉS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="404.html">NOS OFFRES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="404.html">PLANNING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="404.html">LE BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover-gold" href="contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item phone-icon ms-lg-3">
+                            <i class="bi bi-phone-fill"></i> 0745 678 899
+                        </li>
+                        <!-- social icons -->
+                        <li class="nav-item social-icons ms-lg-3">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank" rel="noopener" aria-label="Whatsapp"><i
+                                    class="bi bi-whatsapp"></i></a>
+                        </li>
+                        <!-- Language selection -->
+                        <li class="nav-item ms-lg-3">
+                            <img src="Assets/Général/icons/image.png" alt="conv-de-lang" height="40" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slider -->
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Assets/home/slider/slide_1.jpg" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption text-center" style="bottom: 30%;">
+                        <div class="space"></div>
+                        <h5 class="mb-1">2 INSCRIPTIONS SIMULTANÉES = UN 3ÈME ABONNEMENT DE 6 MOIS OFFERT !</h5>
+                        <button class="btn btn-outline-light"
+                            style="background: transparent; border: 2px solid #fff; color: #fff;">EN SAVOIR
+                            PLUS</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/home/slider/slide_2.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption text-center" style="bottom: 5%;">
+                        <h5 class="mb-1">2 INSCRIPTIONS SIMULTANÉES = UN 3ÈME ABONNEMENT DE 6 MOIS OFFERT !</h5>
+                        <button class="btn btn-outline-light"
+                            style="background: transparent; border: 2px solid #fff; color: #fff;">EN SAVOIR
+                            PLUS</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/home/slider/slide_3.jpg" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption text-center" style="bottom: 5%;">
+                        <h5 class="mb-1">2 INSCRIPTIONS SIMULTANÉES = UN 3ÈME ABONNEMENT DE 6 MOIS OFFERT !</h5>
+                        <button class="btn btn-outline-light"
+                            style="background: transparent; border: 2px solid #fff; color: #fff;">EN SAVOIR
+                            PLUS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="intro-studio py-5">
+            <div class="container text-center">
+                <h2 class="section-title">LE STUDIO SPORT & COACHING,</h2>
+                <p class="section-subtitle">SALE DE SPORT, FITNESS ET CROSSFIT À BIARRITZ</p>
+                <img src="Assets/Général/icons/bg_titre.jpg" alt="ligne gold">
+                <p class="mt-4 lead text-muted">
+                    Aujourd'hui beaucoup de salles de sport vendent des abonnements où vous avez accès à tous les
+                    services du club (cours collectifs, plateau musculation...) mais combien vous accompagnent
+                    réellement? Combien de salles de sport vous proposent un suivi personnalisé et adapté ?
+                    <br><br>
+                    Nous avons la solution. Studio Sport Biarritz est né de ce constat et d'une envie forte : Mettre le
+                    COACHING au centre de la pratique sportive. Nous avons donc créé un tout nouveau concept de salle de
+                    sport SUR MESURE. Trouver une solution adaptée à votre budget et vos disponibilités. Nous réunirons
+                    pour créer une ambiance conviviale entre membres et professionnels. Ce qui manque souvent dans les
+                    grandes structures, c'est l'HUMAIN, le conseil, le suivi et la motivation. Studio Sport Biarritz est
+                    plus qu'une salle de sport, plus qu'un simple lieu pour abandonner des calories. C'est un mode de
+                    vie.
+                    <br><br>
+                    Vous voulez plus de Motivation, plus de Résultats, plus vite... <strong>Alors bienvenue au Studio
+                        Sport & Coaching !</strong>
+                <h2 class="mt-5">LES ACTIVITÉS PROPOSÉES AU STUDIO SPORT BIARRITZ</h2>
+                <img src="Assets/Général/icons/bg_titre.jpg" alt="ligne gold">
+                </p>
+            </div>
+        </section>
+
+        <!-- Cards Activités -->
+        <div class="container-fluid d-flex justify-content-center flex-wrap">
+            <div class="col-lg-3 position-relative">
+                <img src="Assets/home/activites/bg_activite_1.jpg" class="img-fluid " alt="Activité 1">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <img src="Assets/home/activites/icon_alter.png" alt="Logo Activité" height="50" class="mb-3">
+                    <h3 class="fw-bold">Titre de l'Activité</h3>
+                    <p class="mb-2">Découvrez nos activités adaptées à vos besoins et vos objectifs.</p>
+                    <a href="presentation.html" class="btn btn-transparent text-white border-bottom border-white">EN
+                        SAVOIR PLUS</a>
+                </div>
+            </div>
+            <div class="col-lg-3 position-relative">
+                <img src="Assets/home/activites/bg_activite_2.jpg" class="img-fluid" alt="Activité 2">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <img src="Assets/home/activites/icon_corde.png" alt="Logo Activité" height="50" class="mb-3">
+                    <h3 class="fw-bold">Titre de l'Activité</h3>
+                    <p class="mb-2">Découvrez nos activités adaptées à vos besoins et vos objectifs.</p>
+                    <a href="#" class="btn btn-transparent text-white border-bottom border-white">EN SAVOIR PLUS</a>
+                </div>
+            </div>
+            <div class="col-lg-3 position-relative">
+                <img src="Assets/home/activites/bg_activite_3.jpg" class="img-fluid" alt="Activité 3">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <img src="Assets/home/activites/icon_poids.png" alt="Logo Activité" height="50" class="mb-3">
+                    <h3 class="fw-bold">Titre de l'Activité</h3>
+                    <p class="mb-2">Découvrez nos activités adaptées à vos besoins et vos objectifs.</p>
+                    <a href="#" class="btn btn-transparent text-white border-bottom border-white">EN SAVOIR PLUS</a>
+                </div>
+            </div>
+            <div class="col-lg-3 position-relative">
+                <img src="Assets/home/activites/bg_activite_4.jpg" class="img-fluid" alt="Activité 4">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <img src="Assets/home/activites/icon_velo.png" alt="Logo Activité" height="50" class="mb-3">
+                    <h3 class="fw-bold">Titre de l'Activité</h3>
+                    <p class="mb-2">Découvrez nos activités adaptées à vos besoins et vos objectifs.</p>
+                    <a href="#" class="btn btn-transparent text-white border-bottom border-white">EN SAVOIR PLUS</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="dernieres-actualites py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">NOS DERNIÈRES ACTUALITÉS</h2>
+                <div class="text-center">
+                    <img src="Assets/Général/icons/bg_titre.jpg" alt="ligne gold">
+                </div>
+                <div class=" row gy-4">
+                    <!-- Actualité 1 -->
+                    <div class="col-md-4">
+                        <div class="card news-card h-100">
+                            <img src="Assets/home/blog/actu1.png" class="card-img-top" alt="Actualité 1">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase">10 JANVIER 2023</small>
+                                <h5 class="card-title mt-2">TITRE DE L'ACTUALITÉ SUR UNE OU DEUX LIGNES EN MAJUSCULES
+                                </h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                                    congue aliquam veniam, tincidunt ut labore et dolore magna aliqua.</p>
+                                <a href="#" class="text-gold fw-bold text-decoration-none">LIRE LA SUITE <i
+                                        class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actualité 2 -->
+                    <div class="col-md-4">
+                        <div class="card news-card h-100">
+                            <img src="Assets/home/blog/actu2.png" class="card-img-top" alt="Actualité 2">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase">10 JANVIER 2023</small>
+                                <h5 class="card-title mt-2">TITRE DE L'ACTUALITÉ SUR UNE OU DEUX LIGNES EN MAJUSCULES
+                                </h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                                    congue aliquam veniam, tincidunt ut labore et dolore magna aliqua.</p>
+                                <a href="#" class="text-gold fw-bold text-decoration-none">LIRE LA SUITE <i
+                                        class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actualité 3 -->
+                    <div class="col-md-4">
+                        <div class="card news-card h-100">
+                            <img src="Assets/home/blog/actu3.png" class="card-img-top" alt="Actualité 3">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase">10 JANVIER 2023</small>
+                                <h5 class="card-title mt-2">TITRE DE L'ACTUALITÉ SUR UNE OU DEUX LIGNES EN MAJUSCULES
+                                </h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                                    congue aliquam veniam, tincidunt ut labore et dolore magna aliqua.</p>
+                                <a href="#" class="text-gold fw-bold text-decoration-none">LIRE LA SUITE <i
+                                        class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partenaires py-5 bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="section-title mb-4 text-white">STUDIO SPORT & COACHING, NOS PARTENAIRES</h2>
+                <img src="Assets/Général/icons/bg_titre.jpg" alt="ligne gold">
+                <p class="mb-5 text-white">En tant que membre du Studio Sport & Coaching, vous bénéficierez
+                    dans
+                    ces
+                    établissements d'avantages exclusifs. <a href="#" class="text-gold">Cliquez ici</a> pour en savoir
+                    plus.</p>
+                <div class="row align-items-center justify-content-center gy-4">
+                    <div class="col-6 col-md-auto"><img src="Assets/home/partenaires/mini.png" alt="Mini"
+                            class="partner-logo">
+                    </div>
+                    <div class="col-6 col-md-auto"><img src="Assets/home/partenaires/massage.png" alt="Ocean"
+                            class="partner-logo"></div>
+                    <div class="col-6 col-md-auto"><img src="Assets/home/partenaires/tellechea.png" alt="Karma"
+                            class="partner-logo"></div>
+                    <div class="col-6 col-md-auto"><img src="Assets/home/partenaires/ocean.png" alt="Ocean Couleurs"
+                            class="partner-logo"></div>
+                    <div class="col-6 col-md-auto"><img src="Assets/home/partenaires/decathlon.png" alt="Decathlon"
+                            class="partner-logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Instagram Feed (Commune) -->
+        <section class="instagram-feed-section bg-dark">
+            <div class="container-fluid">
+                <div class="row g-0">
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link">
+                            <img src="Assets/Général/insta/00.png" alt="Instagram Post 1" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link">
+                            <img src="Assets/Général/insta/10.png" alt="Instagram Post 2" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link position-relative">
+                            <img src="Assets/Général/insta/20 (1).png" alt="Instagram Post 3" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link">
+                            <img src="Assets/Général/insta/30.png" alt="Instagram Post 4" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link">
+                            <img src="Assets/Général/insta/40.png" alt="Instagram Post 5" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="insta-image-link">
+                            <img src="Assets/Général/insta/50.png" alt="Instagram Post 6" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer-main py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-title"><img src="Assets/Général/icons/logo_footer.png" alt="Logo Footer"
+                            class="footer-logo me-2"> À PROPOS</h5>
+                    <p class="small">
+                        2018 © Studio Sport & Coaching Biarritz<br>
+                        Salle de sport, de fitness et de crossfit à Biarritz Pays basque.<br>
+                        SIRET : 000 000 000<br>
+                        <a href="#" class="text-white-50 custom-hover-gold">Mentions légales</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-title">STUDIO SPORT CORPORATE</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50 d-block mb-1 custom-hover-gold">– Crossfit Biarritz</a>
+                        </li>
+                        <li><a href="#" class="text-white-50 d-block mb-1 custom-hover-gold">– Studio Center : créez
+                                votre studio</a></li>
+                        <li><a href="#" class="text-white-50 d-block mb-1 custom-hover-gold">– Offres Spéciales C.E.</a>
+                        </li>
+                        <li><a href="#" class="text-white-50 d-block mb-1 custom-hover-gold">– Devenir partenaire</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">FITNESS, CROSSFIT ET TRAINING AU PAYS BASQUE</h5>
+                    <p class="small">
+                        Coach personnel de sport à Biarritz, <span class="text-gold">Coach personnel de sport à
+                            Anglet,</span>
+                        Salle de sport à Bayonne, Fitness à Biarritz, Fitness à Anglet, Fitness sur la BAB. Autre mot
+                        clé + ville, Autre
+                        mot clé + ville, Autre mot clé + ville
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center small text-white-50">
+                L'AGENCE 360 COM' <img src="Assets/Général/icons/364.png" alt="Agence 360" class="agency-logo">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS (si besoin) -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="regex.js"></script>
+</body>
+
+</html>
